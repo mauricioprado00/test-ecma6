@@ -23,3 +23,12 @@ var burgerCook = (new TestGenerator()).burgerCook();
 for (var burger of burgerCook) {
 	console.log(burger);
 }
+
+let allBurgers = Array.from((new TestGenerator()).burgerCook());
+
+let [firstBurger, secondBurger, ...otherBurgers] = Array.from((new TestGenerator()).burgerCook());
+
+console.log({allBurgers: allBurgers});
+console.log({firstBurger: firstBurger});
+console.log({secondBurger: secondBurger});
+console.log({otherBurgers: otherBurgers});
