@@ -12,7 +12,6 @@ new TestGenerator();
 
 var burgerCook = (new TestGenerator()).burgerCook();
 
-console.log(burgerCook.next());
-console.log(burgerCook.next());
-console.log(burgerCook.next());
-console.log(burgerCook.next());
+for (var burger of burgerCook) {
+	console.log(burger);
+}
