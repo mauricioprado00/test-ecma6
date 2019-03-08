@@ -1,10 +1,18 @@
 
+class Burger {
+	constructor(name, mainIngredient, secondaryIngredient, ...otherIngredients) {
+		this.name = name;
+		this.mainIngredient = mainIngredient;
+		this.secondaryIngredient = secondaryIngredient;
+		this.otherIngredients = otherIngredients;
+	}
+}
 class TestGenerator {
 
 	* burgerCook() {
-		yield "Cheese burger";
-		yield "Vegan burger";
-		yield "Goat burger";
+		yield new Burger("Cheese burger", 'cheese', 'meat', 'buns', 'letuce');
+		yield new Burger("Vegan burger", 'linsen', 'tomate', 'buns', 'letuce');
+		yield new Burger("Goat burger", 'goat meat', 'tomate', 'buns', 'letuce');
 	}
 }
 
