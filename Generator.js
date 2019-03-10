@@ -42,4 +42,24 @@ iteratable[Symbol.iterator] = function* () {
 	yield 3;
 };
 
+
 console.log([...iteratable]);
+console.log([...TestGenerator.prototype.burgerCook()]);
+
+// test destructuring
+let returnArray = function () {
+	return [
+		{'prop1': 'val1', 'prop2': 'val2'}, 
+		'ret1', 'ret2'
+	];
+}
+
+
+let [{prop1: propa, prop2: propb}, ret3, ret4] = returnArray();
+
+console.log({
+	propa: propa,
+	propb: propb,
+	ret3, ret4
+});
+
