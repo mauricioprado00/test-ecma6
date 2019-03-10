@@ -32,3 +32,14 @@ console.log({allBurgers: allBurgers});
 console.log({firstBurger: firstBurger});
 console.log({secondBurger: secondBurger});
 console.log({otherBurgers: otherBurgers});
+
+// Well known symbols, Symbol.iterator
+var iteratable = {};
+
+iteratable[Symbol.iterator] = function* () {
+	yield 1;
+	yield 2;
+	yield 3;
+};
+
+console.log([...iteratable]);
